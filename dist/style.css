@@ -1,54 +1,39 @@
-/* Parallax base styles
+/* Parallax
 --------------------------------------------- */
 .parallax {
-  height: 500px;
-  /* fallback for older browsers */
   height: 100vh;
+  width: 100vw;
   overflow-x: auto;
   overflow-y: auto;
-  -webkit-perspective: 300px;
-  perspective: 300px; }
+  -webkit-perspective: 100px;
+  perspective: 100px; }
 
-.parallax__group {
-  position: absolute;
-  height: 500px;
-  /* fallback for older browsers */
-  height: 100vh;
+.parallax__layer {
+  position: relative;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d; }
 
-.parallax__layer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0; }
-
 .parallax__layer--fore {
-  -webkit-transform: translateZ(90px) scale(0.7);
-  transform: translateZ(90px) scale(0.7);
-  z-index: 1; }
+  -webkit-transform: translateZ(75px) scale(0.25);
+  transform: translateZ(75px) scale(0.25);
+  z-index: 10; }
 
 .parallax__layer--base {
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  z-index: 4; }
+  -webkit-transform: translateZ(50px) scale(0.5);
+  transform: translateZ(50px) scale(0.5); }
 
 .parallax__layer--back {
-  -webkit-transform: translateZ(-300px) scale(2);
-  transform: translateZ(-300px) scale(2);
-  z-index: 3; }
+  -webkit-transform: translateZ(25px) scale(0.75);
+  transform: translateZ(25px) scale(0.75);
+  z-index: 1; }
 
 .parallax__layer--deep {
-  -webkit-transform: translateZ(-600px) scale(3);
-  transform: translateZ(-600px) scale(3);
-  z-index: 2; }
+  -webkit-transform: translateZ(0px) scale(1);
+  transform: translateZ(0px) scale(1);
+  z-index: 0; }
 
 /* demo styles
 --------------------------------------------- */
-body, html {
-  overflow: hidden; }
-
 body {
   font: 100% / 1.5 Arial; }
 
@@ -60,130 +45,48 @@ body {
   font-size: 200%; }
 
 /* centre the content in the parallax layers */
-.title {
-  text-align: center;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%); }
-
 /* style the groups
 --------------------------------------------- */
-#group1 {
-  z-index: 5;
-  /* slide over group 2 */ }
+#background img {
+  display: block; }
 
-#group1 .parallax__layer--base {
-  background: #66cc66; }
-
-#group2 {
-  z-index: 3;
-  /* slide under groups 1 and 3 */ }
-
-#group2 .parallax__layer--back {
-  background: #7bd266; }
-
-#group3 {
-  z-index: 4;
-  /* slide over group 2 and 4 */ }
-
-#group3 .parallax__layer--base {
-  background: #99d865; }
-
-#background {
-  z-index: 1;
-  /* Layer 1, under everything. */
-  position: relative;
-  height: auto;
-  width: auto;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d; }
-  #background .parallax__layer--deep {
-    width: auto; }
-
-#group4 {
-  z-index: 2;
-  /* slide under group 3 and 5 */ }
-  #group4 .parallax__layer--base {
-    width: 1000px;
-    height: 560px;
-    border: 2px solid black;
+.project {
+  width: 800px;
+  height: 500px;
+  position: absolute; }
+  .project img {
+    display: block;
+    width: 500px;
+    z-index: 3; }
+  .project h1 {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 80px;
+    line-height: 1;
     position: absolute;
-    top: 20px;
-    left: 20px; }
-    #group4 .parallax__layer--base img {
-      display: block;
-      width: 560px;
-      height: auto;
-      position: absolute;
-      top: 50px;
-      left: 50px;
-      z-index: 6; }
-    #group4 .parallax__layer--base h1 {
-      font-family: Helvetica, Arial, sans-serif;
-      font-size: 80px;
-      line-height: 1;
-      position: absolute;
-      top: 60px;
-      left: 480px;
-      z-index: 7; }
-    #group4 .parallax__layer--base p {
-      font-family: Helvetica, Arial, sans-serif;
-      font-size: 20px;
-      color: white;
-      position: absolute;
-      top: 300px;
-      left: 200px;
-      z-index: 8; }
-
-#group5 {
-  z-index: 2;
-  /* slide under group 3 and 5 */
-  top: 1000px;
-  left: 2800px; }
-  #group5 .parallax__layer--base {
-    width: 1000px;
-    height: 560px;
-    border: 2px solid black;
+    top: 60px;
+    left: 480px;
+    z-index: 5; }
+  .project p {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    color: white;
     position: absolute;
-    top: 20px;
-    left: 20px; }
-    #group5 .parallax__layer--base img {
-      display: block;
-      width: 560px;
-      height: auto;
-      position: absolute;
-      top: 50px;
-      left: 50px;
-      z-index: 6; }
-    #group5 .parallax__layer--base h1 {
-      font-family: Helvetica, Arial, sans-serif;
-      font-size: 80px;
-      line-height: 1;
-      position: absolute;
-      top: 60px;
-      left: 480px;
-      z-index: 7; }
-    #group5 .parallax__layer--base p {
-      font-family: Helvetica, Arial, sans-serif;
-      font-size: 20px;
-      color: white;
-      position: absolute;
-      top: 300px;
-      left: 200px;
-      z-index: 8; }
+    top: 300px;
+    left: 200px;
+    z-index: 7; }
 
-#group6 {
-  z-index: 2;
-  /* slide under group 5 and 7 */ }
+#project-1 {
+  top: 420px;
+  left: 1000px; }
 
-#group6 .parallax__layer--back {
-  background: #f5eb64; }
+#project-2 {
+  top: 190px;
+  left: 300px; }
 
-#group7 {
-  z-index: 3;
-  /* slide over group 7 */ }
+#project-3 {
+  top: 650px;
+  left: 800px; }
 
-#group7 .parallax__layer--base {
-  background: #fff164; }
+#project-4 {
+  top: 900px;
+  left: 2200px; }

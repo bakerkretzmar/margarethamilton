@@ -43,10 +43,10 @@ gulp.task('serve', () => {
 gulp.task('deploy', () => {
   return gulp.src('dist/**')
     .pipe(rsync({
-      root: 'dist',
-      hostname: 'thebrokenrecord.ca',
+      root: 'dist/',
+      hostname: 'brokenrecord',
       destination: '/home/thebrok4/public_html/greta',
-      username: 'thebrok4'
+      archive: true
     }));
 });
 
