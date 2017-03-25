@@ -1,0 +1,21 @@
+{
+  "name": "margarethamilton",
+  "version": "0.1.0",
+  "description": "Concept parallax website for Greta.",
+  "private": true,
+  "main": "",
+  "author": "Jacob Baker-Kretzmar",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bakerkretzmar/margarethamilton.git"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-rsync": "0.0.7",
+    "gulp-sass": "^3.1.0"
+  }
+}
