@@ -12,16 +12,24 @@
 // LOL FUCK ME
 // IT WORKS
 
+// Variables
+
+$parallax-container-width: 100vw;
+$parallax-container-height: 100vh;
+
+$parallax-layer-width: 2 * $parallax-container-width;
+$parallax-layer-height: 2 * $parallax-container-height;
+
 .parallax {
-  height: 400px;
-  width: 1000px;
+  width: $parallax-container-width;
+  height: $parallax-container-height;
   border: 1px solid purple;
   overflow-x: auto;
   overflow-y: auto;
   -webkit-perspective: 100px;
   perspective: 100px;
   perspective-origin: center;
-  margin: auto;
+  // margin: auto;
   // position: fixed;
   // top: 50%;
   // left: 50%;
@@ -56,6 +64,7 @@
 .parallax__layer--base {
   -webkit-transform: translateZ(50px) scale(0.5);
   transform: translateZ(50px) scale(0.5);
+  z-index: 2;
   // set z-index of individual items in group, between 2 and 9
 }
 
@@ -94,8 +103,8 @@ body {
   display: block;
   position: absolute;
   border: 2px solid green;
-  width: 2000px;
-  height: 800px;
+  width: $parallax-layer-width;
+  height: $parallax-layer-height;
   overflow: visible;
   // top: 0;
   // right: 0;
@@ -181,34 +190,22 @@ body {
 
 #test1 {
   position: absolute;
-  width: 2000px;
-  height: 800px;
-  // top: 0px;
-  // left: 0px;
-  // right: 0px;
-  // bottom: 0px;
+  width: $parallax-layer-width;
+  height: $parallax-layer-height;
   border: 2px solid red;
   font-size: 20px;
 }
 #test2 {
   position: absolute;
-  width: 2000px;
-  height: 800px;
-  // top: 0px;
-  // left: 0px;
-  // right: 0px;
-  // bottom: 0px;
+  width: $parallax-layer-width;
+  height: $parallax-layer-height;
   border: 2px solid red;
   font-size: 20px;
 }
 #test3 {
   position: absolute;
-  width: 2000px;
-  height: 800px;
-  // top: 0px;
-  // left: 0px;
-  // right: 0px;
-  // bottom: 0px;
+  width: $parallax-layer-width;
+  height: $parallax-layer-height;
   border: 2px solid red;
   font-size: 20px;
 }

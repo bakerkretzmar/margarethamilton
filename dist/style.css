@@ -1,15 +1,14 @@
 /* Parallax
 --------------------------------------------- */
 .parallax {
-  height: 400px;
-  width: 1000px;
+  width: 100vw;
+  height: 100vh;
   border: 1px solid purple;
   overflow-x: auto;
   overflow-y: auto;
   -webkit-perspective: 100px;
   perspective: 100px;
-  perspective-origin: center;
-  margin: auto; }
+  perspective-origin: center; }
 
 #inner {
   position: absolute;
@@ -33,7 +32,8 @@
 
 .parallax__layer--base {
   -webkit-transform: translateZ(50px) scale(0.5);
-  transform: translateZ(50px) scale(0.5); }
+  transform: translateZ(50px) scale(0.5);
+  z-index: 2; }
 
 .parallax__layer--back {
   -webkit-transform: translateZ(25px) scale(0.75);
@@ -60,8 +60,8 @@ body {
   display: block;
   position: absolute;
   border: 2px solid green;
-  width: 2000px;
-  height: 800px;
+  width: 200vw;
+  height: 200vh;
   overflow: visible;
   background: url(F4552018.jpg);
   background-position: center;
@@ -116,22 +116,22 @@ body {
 
 #test1 {
   position: absolute;
-  width: 2000px;
-  height: 800px;
+  width: 200vw;
+  height: 200vh;
   border: 2px solid red;
   font-size: 20px; }
 
 #test2 {
   position: absolute;
-  width: 2000px;
-  height: 800px;
+  width: 200vw;
+  height: 200vh;
   border: 2px solid red;
   font-size: 20px; }
 
 #test3 {
   position: absolute;
-  width: 2000px;
-  height: 800px;
+  width: 200vw;
+  height: 200vh;
   border: 2px solid red;
   font-size: 20px; }
 
