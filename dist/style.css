@@ -1,17 +1,30 @@
 /* Parallax
 --------------------------------------------- */
 .parallax {
-  height: 100vh;
-  width: 100vw;
+  height: 400px;
+  width: 1000px;
+  border: 1px solid purple;
   overflow-x: auto;
   overflow-y: auto;
   -webkit-perspective: 100px;
-  perspective: 100px; }
+  perspective: 100px;
+  perspective-origin: center;
+  margin: auto; }
+
+#inner {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px; }
 
 .parallax__layer {
-  position: relative;
+  position: absolute;
   -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d; }
+  transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transform: translateX(-50%) translateY(-50%); }
 
 .parallax__layer--fore {
   -webkit-transform: translateZ(75px) scale(0.25);
@@ -41,19 +54,25 @@ body {
   margin: 0;
   padding: 0; }
 
-.parallax {
-  font-size: 200%; }
-
-/* centre the content in the parallax layers */
 /* style the groups
 --------------------------------------------- */
-#background img {
-  display: block; }
+#background {
+  display: block;
+  position: absolute;
+  border: 2px solid green;
+  width: 2000px;
+  height: 800px;
+  overflow: visible;
+  background: url(F4552018.jpg);
+  background-position: center;
+  background-size: cover; }
 
 .project {
-  width: 800px;
-  height: 500px;
-  position: absolute; }
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px; }
   .project img {
     display: block;
     width: 500px;
@@ -76,17 +95,74 @@ body {
     z-index: 7; }
 
 #project-1 {
+  position: absolute;
   top: 420px;
   left: 1000px; }
 
 #project-2 {
+  position: absolute;
   top: 190px;
   left: 300px; }
 
 #project-3 {
+  position: absolute;
   top: 650px;
   left: 800px; }
 
 #project-4 {
+  position: absolute;
   top: 900px;
   left: 2200px; }
+
+#test1 {
+  position: absolute;
+  width: 2000px;
+  height: 800px;
+  border: 2px solid red;
+  font-size: 20px; }
+
+#test2 {
+  position: absolute;
+  width: 2000px;
+  height: 800px;
+  border: 2px solid red;
+  font-size: 20px; }
+
+#test3 {
+  position: absolute;
+  width: 2000px;
+  height: 800px;
+  border: 2px solid red;
+  font-size: 20px; }
+
+/* Debugger
+--------------------------------------------- */
+.debug {
+  position: fixed;
+  top: 0;
+  left: .5em;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  padding: .5em;
+  border-radius: 0 0 5px 5px; }
+
+.debug-on .parallax__layer {
+  -webkit-transform: rotateY(1deg);
+  transform: rotateY(1deg);
+  box-shadow: 0 0 0 2px #000;
+  opacity: 0.8;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: transform 0.5s; }
+  .debug-on .parallax__layer.parallax__layer--deep {
+    -webkit-transform: translate3d(0, 0, -400px);
+    transform: translate3d(0, 0, -400px); }
+  .debug-on .parallax__layer.parallax__layer--back {
+    -webkit-transform: translate3d(0, 0, -300px);
+    transform: translate3d(0, 0, -300px); }
+  .debug-on .parallax__layer.parallax__layer--base {
+    -webkit-transform: translate3d(0, 0, -200px);
+    transform: translate3d(0, 0, -200px); }
+  .debug-on .parallax__layer.parallax__layer--fore {
+    -webkit-transform: translate3d(0, 0, -100px);
+    transform: translate3d(0, 0, -100px); }

@@ -1,19 +1,50 @@
 /* Parallax
 --------------------------------------------- */
 
+// Use groups!! Make several groups that look exactly like .parallax does
+// right now, then nest them side-by-side inside one larger div, like a
+// mosaic. The same way Keith's demo has groups stacked vertically so that
+// you can scroll down through them and always see something, if I stack
+// my groups vertically *and* horizontally, I should be able to do the same
+// thing in every direction and----
+//
+// NEVER MIND I DID IT I JUST SHOULD HAVE TURNED DEBUG OFF
+// LOL FUCK ME
+// IT WORKS
+
 .parallax {
-  height: 100vh;
-  width: 100vw;
+  height: 400px;
+  width: 1000px;
+  border: 1px solid purple;
   overflow-x: auto;
   overflow-y: auto;
   -webkit-perspective: 100px;
   perspective: 100px;
+  perspective-origin: center;
+  margin: auto;
+  // position: fixed;
+  // top: 50%;
+  // left: 50%;
+  // transform: translateX(-50%) translateY(-50%);
+}
+
+#inner {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
 }
 
 .parallax__layer {
-  position: relative;
+  position: absolute;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  // top: 50%;
+  // left: 50%;
+  transform: translateX(-50%) translateY(-50%);
 }
 
 .parallax__layer--fore {
@@ -56,31 +87,49 @@ body {
   padding:0;
 }
 
-.parallax {
-  font-size: 200%;
-}
-
- /* centre the content in the parallax layers */
-// .title {
-//   text-align: center;
-//   position: absolute;
-//   left: 50%;
-//   top: 50%;
-//   -webkit-transform: translate(-50%, -50%);
-//   transform: translate(-50%, -50%);
-// }
-
 /* style the groups
 --------------------------------------------- */
 
 #background {
-  img { display: block; }
+  display: block;
+  position: absolute;
+  border: 2px solid green;
+  width: 2000px;
+  height: 800px;
+  overflow: visible;
+  // top: 0;
+  // right: 0;
+  // bottom: 0;
+  // left: 0;
+  background: url(F4552018.jpg);
+  background-position: center;
+  background-size: cover;
+  // margin: -200px; -- these make the final computed size of the background
+  // padding: 200px; -- more than 2000x800 px
+  // #imgWrapper {
+  //   display: block;
+  //   position: absolute;
+  //   width: 0px;
+  //   height: 0px;
+  //   vertical-align: middle;
+  //   img {
+  //     position: absolute;
+  //     left: 50%;
+  //     top: 50%;
+  //     // transform: translateX(-50%) translateY(-50%);
+  //     width: 2000px;
+  //   }
+  // }
 }
 
 .project {
-  width: 800px;
-  height: 500px;
+  // width: 800px;
+  // height: 500px;
   position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
   img {
     display: block;
     width: 500px;
@@ -107,21 +156,98 @@ body {
 }
 
 #project-1 {
+  position: absolute;
   top: 420px;
   left: 1000px;
 }
 
 #project-2 {
+  position: absolute;
   top: 190px;
   left: 300px;
 }
 
 #project-3 {
+  position: absolute;
   top: 650px;
   left: 800px;
 }
 
 #project-4 {
+  position: absolute;
   top: 900px;
   left: 2200px;
+}
+
+#test1 {
+  position: absolute;
+  width: 2000px;
+  height: 800px;
+  // top: 0px;
+  // left: 0px;
+  // right: 0px;
+  // bottom: 0px;
+  border: 2px solid red;
+  font-size: 20px;
+}
+#test2 {
+  position: absolute;
+  width: 2000px;
+  height: 800px;
+  // top: 0px;
+  // left: 0px;
+  // right: 0px;
+  // bottom: 0px;
+  border: 2px solid red;
+  font-size: 20px;
+}
+#test3 {
+  position: absolute;
+  width: 2000px;
+  height: 800px;
+  // top: 0px;
+  // left: 0px;
+  // right: 0px;
+  // bottom: 0px;
+  border: 2px solid red;
+  font-size: 20px;
+}
+
+
+/* Debugger
+--------------------------------------------- */
+
+.debug {
+  position: fixed;
+  top: 0;
+  left: .5em;
+  z-index: 999;
+  background: rgba(0,0,0,.85);
+  color: #fff;
+  padding: .5em;
+  border-radius: 0 0 5px 5px;
+}
+.debug-on .parallax__layer {
+  -webkit-transform: rotateY(1deg);
+  transform: rotateY(1deg);
+  box-shadow: 0 0 0 2px #000;
+  opacity: 0.8;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  &.parallax__layer--deep {
+    -webkit-transform: translate3d(0, 0, -400px);
+    transform: translate3d(0, 0, -400px);
+  }
+  &.parallax__layer--back {
+    -webkit-transform: translate3d(0, 0, -300px);
+    transform: translate3d(0, 0, -300px);
+  }
+  &.parallax__layer--base {
+    -webkit-transform: translate3d(0, 0, -200px);
+    transform: translate3d(0, 0, -200px);
+  }
+  &.parallax__layer--fore {
+    -webkit-transform: translate3d(0, 0, -100px);
+    transform: translate3d(0, 0, -100px);
+  }
 }

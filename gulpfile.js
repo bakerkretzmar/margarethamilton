@@ -18,7 +18,7 @@ gulp.task('sass', () => {
 });
 
 gulp.task('copy', () => {
-  gulp.src(['_assets/**', '_html/**'])
+  gulp.src(['_assets/**', '_html/**', '_js/**'])
     .pipe(gulp.dest('dist'));
 });
 
@@ -38,6 +38,7 @@ gulp.task('serve', () => {
   gulp.watch(sassFiles, ['sass']);
   gulp.watch('_html/*.html', ['copy']);
   gulp.watch('_assets/*', ['copy']);
+  gulp.watch('_js/*', ['copy']);
 });
 
 gulp.task('deploy', () => {
