@@ -50,34 +50,54 @@ $parallax-layer-height: 2 * $parallax-container-height;
   transform-style: preserve-3d;
   -webkit-transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
-  // top: 50%;
-  // left: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  // transform: translateX(-50%) translateY(-50%);
+  width: $parallax-layer-width;
+  height: $parallax-layer-height;
+  border: 2px solid red;
 }
 
-.parallax__layer--fore {
-  -webkit-transform: translateZ(75px) scale(0.25);
-  transform: translateZ(75px) scale(0.25);
-  z-index: 10;
-}
-
-.parallax__layer--base {
-  -webkit-transform: translateZ(50px) scale(0.5);
-  transform: translateZ(50px) scale(0.5);
-  z-index: 2;
-  // set z-index of individual items in group, between 2 and 9
-}
-
-.parallax__layer--back {
-  -webkit-transform: translateZ(25px) scale(0.75);
-  transform: translateZ(25px) scale(0.75);
-  z-index: 1;
-}
-
-.parallax__layer--deep {
-  -webkit-transform: translateZ(0px) scale(1);
+.parallax__layer--0 {
   transform: translateZ(0px) scale(1);
   z-index: 0;
+  background: url(F4552018.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.parallax__layer--1 {
+  transform: translateZ(10px) scale(0.9);
+  z-index: 1;
+}
+.parallax__layer--2 {
+  transform: translateZ(20px) scale(0.8);
+  z-index: 2;
+}
+.parallax__layer--3 {
+  transform: translateZ(30px) scale(0.7);
+  z-index: 3;
+}
+.parallax__layer--4 {
+  transform: translateZ(40px) scale(0.6);
+  z-index: 4;
+}
+.parallax__layer--5 {
+  transform: translateZ(50px) scale(0.5);
+  z-index: 5;
+}
+.parallax__layer--6 {
+  transform: translateZ(60px) scale(0.4);
+  z-index: 6;
+}
+.parallax__layer--7 {
+  transform: translateZ(70px) scale(0.3);
+  z-index: 7;
+}
+.parallax__layer--8 {
+  transform: translateZ(80px) scale(0.2);
+  z-index: 8;
+}
+.parallax__layer--9 {
+  transform: translateZ(90px) scale(0.1);
+  z-index: 9;
 }
 
 /* demo styles
