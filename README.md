@@ -4,7 +4,6 @@ Stay tuned.
 
 ## To-do
 
-- Implement debug from demo
-- Viewbox border
-- Larger background
-- Perspective math
+- Better perspective math
+- Start scroll at center even in different viewport sizes
+- More test projects

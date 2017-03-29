@@ -1,34 +1,96 @@
+/* minireset.css v0.0.2 | MIT License | github.com/jgthms/minireset.css */
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+ul {
+  list-style: none; }
+
+button,
+input,
+select,
+textarea {
+  margin: 0; }
+
+html {
+  box-sizing: border-box; }
+
+* {
+  box-sizing: inherit; }
+  *:before, *:after {
+    box-sizing: inherit; }
+
+img,
+embed,
+object,
+audio,
+video {
+  height: auto;
+  max-width: 100%; }
+
+iframe {
+  border: 0; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td,
+th {
+  padding: 0;
+  text-align: left; }
+
 /* Parallax
 --------------------------------------------- */
 .parallax {
+  box-sizing: border-box;
   width: 100vw;
   height: 100vh;
-  border: 1px solid purple;
   overflow-x: auto;
   overflow-y: auto;
-  -webkit-perspective: 100px;
   perspective: 100px;
-  perspective-origin: center; }
-
-#inner {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px; }
+  perspective-origin: center;
+  border: 6px solid #0adbe2; }
 
 .parallax__layer {
   position: absolute;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  -webkit-transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
   width: 200vw;
-  height: 200vh;
-  border: 2px solid red; }
+  height: 200vh; }
 
 .parallax__layer--0 {
-  transform: translateZ(0px) scale(1);
   z-index: 0;
   background: url(F4552018.jpg);
   background-position: center;
@@ -70,124 +132,114 @@
   transform: translateZ(90px) scale(0.1);
   z-index: 9; }
 
-/* demo styles
+/* Typography
 --------------------------------------------- */
-body {
-  font: 100% / 1.5 Arial; }
+html {
+  font-family: 'Roboto', Helvetica, Arial, sans-serif; }
 
-* {
-  margin: 0;
-  padding: 0; }
-
-/* style the groups
+/* Elements
 --------------------------------------------- */
-#background {
-  display: block;
-  position: absolute;
-  border: 2px solid green;
-  width: 200vw;
-  height: 200vh;
-  overflow: visible;
-  background: url(F4552018.jpg);
-  background-position: center;
-  background-size: cover; }
-
 .project {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  bottom: 0px;
-  right: 0px; }
+  width: 700px;
+  height: 400px;
+  position: absolute; }
   .project img {
     display: block;
-    width: 500px;
-    z-index: 3; }
+    width: 400px; }
   .project h1 {
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 80px;
+    font-size: 70px;
+    font-weight: bold;
+    text-shadow: 4px 4px #f33;
     line-height: 1;
     position: absolute;
-    top: 60px;
-    left: 480px;
-    z-index: 5; }
+    top: 100px;
+    left: 280px; }
   .project p {
-    font-family: Helvetica, Arial, sans-serif;
     font-size: 20px;
-    color: white;
+    color: #fff;
     position: absolute;
-    top: 300px;
-    left: 200px;
-    z-index: 7; }
+    top: 250px;
+    left: 100px; }
 
-#project-1 {
-  position: absolute;
-  top: 420px;
-  left: 1000px; }
+#project1 {
+  top: 20px;
+  left: 20px; }
 
-#project-2 {
-  position: absolute;
-  top: 190px;
-  left: 300px; }
-
-#project-3 {
-  position: absolute;
-  top: 650px;
-  left: 800px; }
-
-#project-4 {
-  position: absolute;
-  top: 900px;
-  left: 2200px; }
-
-#test1 {
-  position: absolute;
-  width: 200vw;
-  height: 200vh;
-  border: 2px solid red;
-  font-size: 20px; }
-
-#test2 {
-  position: absolute;
-  width: 200vw;
-  height: 200vh;
-  border: 2px solid red;
-  font-size: 20px; }
-
-#test3 {
-  position: absolute;
-  width: 200vw;
-  height: 200vh;
-  border: 2px solid red;
-  font-size: 20px; }
-
-/* Debugger
+/* Debugging
 --------------------------------------------- */
-.debug {
+#debugControls {
   position: fixed;
-  top: 0;
-  left: .5em;
-  z-index: 999;
-  background: rgba(0, 0, 0, 0.85);
-  color: #fff;
-  padding: .5em;
-  border-radius: 0 0 5px 5px; }
+  bottom: 10px;
+  left: 10px;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px 5px;
+  border-radius: 5px; }
+  #debugControls button {
+    padding: 3px 6px 4px;
+    font-size: 14px;
+    border: none;
+    border-radius: 3px;
+    color: #000;
+    background-color: #eee;
+    margin: 0px 5px; }
 
-.debug-on .parallax__layer {
-  -webkit-transform: rotateY(1deg);
-  transform: rotateY(1deg);
-  box-shadow: 0 0 0 2px #000;
+#frames {
+  display: none; }
+  #frames .parallax__layer {
+    border: 2px solid #d14215; }
+    #frames .parallax__layer h2 {
+      display: block;
+      position: absolute;
+      font-size: 60px;
+      font-weight: bold;
+      padding: 0px 20px 0px;
+      border: 1.5px dashed #636363; }
+      #frames .parallax__layer h2.top {
+        top: 10px; }
+      #frames .parallax__layer h2.right {
+        right: 10px; }
+      #frames .parallax__layer h2.bottom {
+        bottom: 10px; }
+      #frames .parallax__layer h2.left {
+        left: 10px; }
+  #frames.visible {
+    display: block; }
+
+#center {
+  display: none;
+  z-index: 100;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 14px;
+  height: 14px;
+  border-radius: 7px;
+  background-color: #fc189a; }
+  #center.visible {
+    display: block; }
+
+.explode .parallax__layer {
   opacity: 0.8;
-  -webkit-transition: -webkit-transform 0.5s;
   transition: transform 0.5s; }
-  .debug-on .parallax__layer.parallax__layer--deep {
-    -webkit-transform: translate3d(0, 0, -400px);
-    transform: translate3d(0, 0, -400px); }
-  .debug-on .parallax__layer.parallax__layer--back {
-    -webkit-transform: translate3d(0, 0, -300px);
-    transform: translate3d(0, 0, -300px); }
-  .debug-on .parallax__layer.parallax__layer--base {
-    -webkit-transform: translate3d(0, 0, -200px);
-    transform: translate3d(0, 0, -200px); }
-  .debug-on .parallax__layer.parallax__layer--fore {
-    -webkit-transform: translate3d(0, 0, -100px);
-    transform: translate3d(0, 0, -100px); }
+  .explode .parallax__layer.parallax__layer--0 {
+    transform: translate3d(100px, 0, -600px) rotateY(2deg); }
+  .explode .parallax__layer.parallax__layer--1 {
+    transform: translate3d(100px, 0, -550px) rotateY(2deg); }
+  .explode .parallax__layer.parallax__layer--2 {
+    transform: translate3d(100px, 0, -500px) rotateY(2deg); }
+  .explode .parallax__layer.parallax__layer--3 {
+    transform: translate3d(100px, 0, -450px) rotateY(2deg); }
+  .explode .parallax__layer.parallax__layer--4 {
+    transform: translate3d(100px, 0, -400px) rotateY(2deg); }
+  .explode .parallax__layer.parallax__layer--5 {
+    transform: translate3d(100px, 0, -350px) rotateY(2deg); }
+  .explode .parallax__layer.parallax__layer--6 {
+    transform: translate3d(100px, 0, -300px) rotateY(2deg); }
+  .explode .parallax__layer.parallax__layer--7 {
+    transform: translate3d(100px, 0, -250px) rotateY(2deg); }
+  .explode .parallax__layer.parallax__layer--8 {
+    transform: translate3d(100px, 0, -200px) rotateY(2deg); }
+  .explode .parallax__layer.parallax__layer--9 {
+    transform: translate3d(100px, 0, -150px) rotateY(2deg); }

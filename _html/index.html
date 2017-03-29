@@ -5,98 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Margaret Hamilton</title>
     <link type="text/css" rel="stylesheet" href="style.css">
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
     <!-- <link rel="shortcut icon" type="image/png" href="/logo.png"> -->
   </head>
 
   <body>
-    <div class="debug">
-      <label><input type="checkbox"> Debug</label>
-    </div>
 
     <div class="parallax">
 
-      <!-- <div id="background" class="parallax__layer parallax__layer--deep">
-        <div id="imgWrapper">
-          <img src="F4552018.jpg">
-        </div>
-      </div> -->
-
-      <div id="layer0" class="parallax__layer parallax__layer--0">
-        Zero Zero Zero Zero Zero Zero Zero Zero Zero Zero Zero Zero Zero
-      </div>
-      <div id="layer1" class="parallax__layer parallax__layer--1">
-        One One One One One One One One One One One One One One One One One
-      </div>
-      <div id="layer2" class="parallax__layer parallax__layer--2">
-        Two Two Two Two Two Two Two Two Two Two Two Two Two Two Two Two
-      </div>
-      <div id="layer3" class="parallax__layer parallax__layer--3">
-        Three Three Three Three Three Three Three Three Three Three Three
-      </div>
-      <div id="layer4" class="parallax__layer parallax__layer--4">
-        Four Four Four Four Four Four Four Four Four Four Four Four Four
-      </div>
-      <div id="layer5" class="parallax__layer parallax__layer--5">
-        Five Five Five Five Five Five Five Five Five Five Five Five Five
-      </div>
-      <div id="layer6" class="parallax__layer parallax__layer--6">
-        Six Six Six Six Six Six Six Six Six Six Six Six Six Six Six Six
-      </div>
-      <div id="layer7" class="parallax__layer parallax__layer--7">
-        Seven Seven Seven Seven Seven Seven Seven Seven Seven Seven Seven
-      </div>
-      <div id="layer8" class="parallax__layer parallax__layer--8">
-        Eight Eight Eight Eight Eight Eight Eight Eight Eight Eight Eight
-      </div>
-      <div id="layer9" class="parallax__layer parallax__layer--9">
-        Nine Nine Nine Nine Nine Nine Nine Nine Nine Nine Nine Nine Nine
+      <div class="parallax__layer parallax__layer--0">
+        <div id="center"></div>
       </div>
 
-
-      <!-- <div id="test1" class="parallax__layer parallax__layer--back">
-        Back
-      </div>
-      <div id="test2" class="parallax__layer parallax__layer--base">
-        BaseBaseBaseBaseBaseBaseBaseBaseBaseBaseBaseBaseBaseBaseBaseBase
-      </div>
-      <div id="test3" class="parallax__layer parallax__layer--fore">
-        ForeForeForeForeForeForeForeForeForeForeForeForeForeForeForeFore
-      </div>
-
-      <div id="background" class="parallax__layer parallax__layer--deep">
-        <div id="imgWrapper">
-          <!-- <img src="F4552018.jpg"> -->
-        </div>
-      </div> -->
-
-      <!-- <div class="parallax__layer parallax__layer--base project">
-        <div id="project-1">
+      <div class="parallax__layer parallax__layer--5">
+        <div id="project1" class="project">
           <img class="thumbnail" src="thumb1.png" alt="thumb1.png" />
           <h1>Head Inside A Building</h1>
-          <p class="blurb">Lorem ipsum dolor sit amet and that's all the lorem ipsum text I can remember off the top of my head. I have to keep rambling though because this section needs to take up enough space to justify calling it a 'blurb' or a 'paragraph' or some other fancy English word like that, you know?</p>
+          <p class="blurb">Lorem ipsum dolor sit amet and that's all the lorem ipsum text I can remember off the top of my head. I have to keep rambling though because this section needs to take up enough space to justify calling it a 'blurb' or a 'paragraph' or some other fancy word like that, you know?</p>
         </div>
-        <div id="project-2">
-          <img class="thumbnail" src="thumb1.png" alt="thumb1.png" />
-          <h1>Head Inside A Building</h1>
-          <p class="blurb">Lorem ipsum dolor sit amet and that's all the lorem ipsum text I can remember off the top of my head. I have to keep rambling though because this section needs to take up enough space to justify calling it a 'blurb' or a 'paragraph' or some other fancy English word like that, you know?</p>
-        </div>
-        <div id="project-3">
-          <img class="thumbnail" src="thumb1.png" alt="thumb1.png" />
-          <h1>Head Inside A Building</h1>
-          <p class="blurb">Lorem ipsum dolor sit amet and that's all the lorem ipsum text I can remember off the top of my head. I have to keep rambling though because this section needs to take up enough space to justify calling it a 'blurb' or a 'paragraph' or some other fancy English word like that, you know?</p>
-        </div>
-        <div id="project-4">
-          <img class="thumbnail" src="thumb1.png" alt="thumb1.png" />
-          <h1>Head Inside A Building</h1>
-          <p class="blurb">Lorem ipsum dolor sit amet and that's all the lorem ipsum text I can remember off the top of my head. I have to keep rambling though because this section needs to take up enough space to justify calling it a 'blurb' or a 'paragraph' or some other fancy English word like that, you know?</p>
-        </div>
-      </div> -->
-
-      <!-- <div id="project-1" class="parallax__layer parallax__layer--base project">
-        <img class="thumbnail" src="thumb1.png" alt="thumb1.png" />
-        <h1>Head Inside A Building</h1>
-        <p class="blurb">Lorem ipsum dolor sit amet and that's all the lorem ipsum text I can remember off the top of my head. I have to keep rambling though because this section needs to take up enough space to justify calling it a 'blurb' or a 'paragraph' or some other fancy English word like that, you know?</p>
-      </div> -->
+      </div><!-- .parallax__layer 5 -->
 
       <!-- <div id="project-2" class="parallax__layer parallax__layer--base project">
         <img class="thumbnail" src="thumb1.png" alt="thumb1.png" />
@@ -116,6 +46,24 @@
         <p class="blurb">Lorem ipsum dolor sit amet and that's all the lorem ipsum text I can remember off the top of my head. I have to keep rambling though because this section needs to take up enough space to justify calling it a 'blurb' or a 'paragraph' or some other fancy English word like that, you know?</p>
       </div> -->
 
+      <div id="frames">
+        <div class="parallax__layer parallax__layer--1"><h2 class="top left">1</h2><h2 class="top right">1</h2><h2 class="bottom right">1</h2><h2 class="bottom left">1</h2></div>
+        <div class="parallax__layer parallax__layer--2"><h2 class="top left">2</h2><h2 class="top right">2</h2><h2 class="bottom right">2</h2><h2 class="bottom left">2</h2></div>
+        <div class="parallax__layer parallax__layer--3"><h2 class="top left">3</h2><h2 class="top right">3</h2><h2 class="bottom right">3</h2><h2 class="bottom left">3</h2></div>
+        <div class="parallax__layer parallax__layer--4"><h2 class="top left">4</h2><h2 class="top right">4</h2><h2 class="bottom right">4</h2><h2 class="bottom left">4</h2></div>
+        <div class="parallax__layer parallax__layer--5"><h2 class="top left">5</h2><h2 class="top right">5</h2><h2 class="bottom right">5</h2><h2 class="bottom left">5</h2></div>
+        <div class="parallax__layer parallax__layer--6"><h2 class="top left">6</h2><h2 class="top right">6</h2><h2 class="bottom right">6</h2><h2 class="bottom left">6</h2></div>
+        <div class="parallax__layer parallax__layer--7"><h2 class="top left">7</h2><h2 class="top right">7</h2><h2 class="bottom right">7</h2><h2 class="bottom left">7</h2></div>
+        <div class="parallax__layer parallax__layer--8"><h2 class="top left">8</h2><h2 class="top right">8</h2><h2 class="bottom right">8</h2><h2 class="bottom left">8</h2></div>
+        <div class="parallax__layer parallax__layer--9"><h2 class="top left">9</h2><h2 class="top right">9</h2><h2 class="bottom right">9</h2><h2 class="bottom left">9</h2></div>
+      </div><!-- #frames -->
+
+    </div>
+
+    <div id="debugControls">
+      <button id="debugFrames">Frames</button>
+      <button id="debugExplode">Explode</button>
+      <button id="debugCenter">Center</button>
     </div>
 
     <script src="main.js"></script>
