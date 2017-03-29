@@ -81,8 +81,7 @@ th {
   overflow-x: auto;
   overflow-y: auto;
   perspective: 100px;
-  perspective-origin: center;
-  border: 6px solid #0adbe2; }
+  perspective-origin: center; }
 
 .parallax__layer {
   position: absolute;
@@ -137,6 +136,10 @@ th {
 html {
   font-family: 'Roboto', Helvetica, Arial, sans-serif; }
 
+a {
+  text-decoration: none;
+  color: inherit; }
+
 /* Elements
 --------------------------------------------- */
 .project {
@@ -154,6 +157,8 @@ html {
     position: absolute;
     top: 100px;
     left: 280px; }
+    .project h1 a:hover {
+      color: #fff; }
   .project p {
     font-size: 20px;
     color: #fff;
@@ -161,9 +166,71 @@ html {
     top: 250px;
     left: 100px; }
 
+.project .popup {
+  display: none;
+  width: 600px;
+  height: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background: #fff; }
+
 #project1 {
   top: 20px;
   left: 20px; }
+
+#lines {
+  position: absolute;
+  top: -6.2%;
+  right: -6.2%;
+  left: -6.2%;
+  bottom: -6.2%;
+  overflow: hidden;
+  background: url(lines.png);
+  background-position: center;
+  background-repeat: repeat-x repeat-y; }
+
+#loading #wait {
+  z-index: 99;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: #e4ddca;
+  opacity: 100; }
+  #loading #wait h2 {
+    display: block;
+    margin-top: 45vh;
+    font-size: 22px;
+    text-align: center;
+    font-style: italic; }
+
+#loading .border {
+  z-index: 100;
+  position: fixed;
+  background-color: #00a5bb; }
+  #loading .border#top {
+    top: 0px;
+    right: 100vw;
+    left: 0px;
+    height: 6px; }
+  #loading .border#right {
+    top: 0px;
+    right: 0px;
+    bottom: 100vh;
+    width: 6px; }
+  #loading .border#bottom {
+    right: 0px;
+    bottom: 0px;
+    left: 100vw;
+    height: 6px; }
+  #loading .border#left {
+    top: 100vh;
+    bottom: 0px;
+    left: 0px;
+    width: 6px; }
 
 /* Debugging
 --------------------------------------------- */
