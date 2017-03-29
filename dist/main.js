@@ -17,6 +17,37 @@ debugFrames.addEventListener('click', debugFramesUpdate);
 debugExplode.addEventListener('click', debugExplodeUpdate);
 debugCenter.addEventListener('click', debugCenterUpdate);
 
+// Prevent default arrow key behaviour
+window.addEventListener("keydown", function(e) {
+    // space and arrow keys
+    if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+        e.preventDefault();
+    }
+}, false);
+
+// Create smooth scrolling nudges using arrow keys
+$(function() {
+  $(window).keydown(function(key) {
+    if (key.which == 37) {
+      var sL = $('.parallax').scrollLeft();
+      sL -= 80;
+      $('.parallax').animate({scrollLeft: sL}, 400);
+    } else if (key.which == 38) {
+      var sU = $('.parallax').scrollTop();
+      sU -= 80;
+      $('.parallax').animate({scrollTop: sU}, 400);
+    } else if (key.which == 39) {
+      var sR = $('.parallax').scrollLeft();
+      sR += 80;
+      $('.parallax').animate({scrollLeft: sR}, 400);
+    } else if (key.which == 40) {
+      var sD = $('.parallax').scrollTop();
+      sD += 80;
+      $('.parallax').animate({scrollTop: sD}, 400);
+    };
+  });
+});
+
 // Scroll to center
 $(function() {
   $(".parallax").scrollTop(350);
