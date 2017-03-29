@@ -41,6 +41,9 @@ $(function() {
 // Popups
 $(function() {
   $('.project h1').click(function() {
-    $(this).parent().children('.popup').css({display: 'block'});
-  })
-})
+    $(this).parent().children('.popup').slideDown(100);
+  });
+  $('.popup #close').click(function() {
+    $(this).parent().slideUp(100);
+  });
+});
